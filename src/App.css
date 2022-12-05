@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.nav{
+  background-image: url("https://wallpaperaccess.com/full/2324573.jpg")
+}
+.nav a{
+  text-decoration: none;
+  color: white;
+}
+.home{
+  background-color: pink;
+  text-align: left;
+}
+.contact{
+  background-color: violet;
+  text-align: center;
+}
+.about{
+  background-color: black;
+  text-align: right;
+}

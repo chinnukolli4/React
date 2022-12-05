@@ -1,24 +1,32 @@
-//import ClassComponent from './ClassComponent'
-//import PropsExample from './PropsExample'
+/*import ClassComponent from './ClassComponent'
+import PropsExample from './PropsExample'
 import FuncProps from './FunceProps'
 import StateExample from './StateExample'
 import Demo from './Demo'
 import Events from './Events'
+import JSX from './JSX'*/
+import Home from './Components/Home'
+import About from './Components/About'
+import Contact from './Components/Contact'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Navbar from './Components/Navbar'
+import NotFound from './Components/NotFound'
+
 function App(){
   return(
     <section>
-    <StateExample/>
-    <FuncProps carname="rolls royce" year="1998"/>
-    <Demo price="1st"/>
-    <Events/>
-    {/*<PropsExample name="mounika" age="20"/>
-        <PropsExample name="hema" age="19"/>
-        
-          <p>hi good afternoon all</p>
-          <h1>Have a good day</h1>
-          <img src="https://i.pinimg.com/736x/ce/14/20/ce1420adc861d3be19f003086d5d9930.jpg" alt="nyt view"/>
-          <ClassComponent/>  */}
+    <BrowserRouter>
+    <Navbar/>
+    <NotFound/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="*" element={<NotFound/>}/>
+       </Routes>
+       </BrowserRouter>
     </section>
+
     )
 }
 export default App;
